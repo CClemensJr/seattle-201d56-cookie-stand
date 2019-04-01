@@ -138,17 +138,22 @@ function main() {
   salesByStore.push(alki.cookiesSoldPerHour);
 }
 
-
 function displayData() {
   for (let i = 0; i < locations.length; i++)
   {
     let newHeading = document.createElement("h1");
     let newTitle = document.createTextNode(`${ locations[i] }`);
-
+    
     newHeading.appendChild(newTitle);
     document.body.appendChild(newHeading);
-
     
+    for (let j = 0; j < salesByStore[i].length; j++) {
+      let newLI = document.createElement("li");
+      let newLIContent = document.createTextNode(`${ hoursOfOperation [j] }: ${ salesByStore[i][j] }`);
+      
+      newLI.appendChild(newLIContent);
+      document.body.appendChild(newLI);
+    }
   }
 }
 
