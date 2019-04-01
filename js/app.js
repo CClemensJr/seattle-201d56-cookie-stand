@@ -17,7 +17,9 @@ let firstAndPike = {
   randomizeCustomersPerHour: () => Math.random() * (maxHourlyCustomers - minHourlyCustomers) + minHourlyCustomers,
   
   //Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
-
+  hourlyFigures: function() {
+    
+  }
   
   //Store the results for each location in a separate array... perhaps as a property of the object representing that location
 }
