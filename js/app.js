@@ -140,7 +140,12 @@ function main() {
 
 main();
 
-for (let i = 0; i < salesByStore[0].length; i++)
-{
-  h1
+function displayData() {
+  for (let i = 0; i < locations.length; i++)
+  {
+    let title = document.getElementById(locationName);
+  
+    title.innerText = locations[i];
+  }
+
 }
