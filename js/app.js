@@ -15,41 +15,39 @@ let firstAndPike = {
   minHourlyCustomers: 23,
   maxHourlyCustomers: 65,
   avgCookiesPerSale: 6.3,
+  totalCookiesSold: 0,
+  cookiesSoldPerHour: [],
   
-  //Uses a method of that object to generate a random number of customers per hour. Objects/Math/random
-  customersPerHour: randomizer(minHourlyCustomers, maxHourlyCustomers),
   
   //Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
   hourlyFigures: function() {
-    let salesArray =[];
-
     for (let i = 0; i < hoursOfOperation.length; i++)
     {
-      salesArray.push(this.avgCookiesPerSale * this.customersPerHour);
-      console.log(salesArray[i]);
-    }
+      //Uses a method of that object to generate a random number of customers per hour. Objects/Math/random
+      let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+      let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
 
-    return salesArray;
-  },
-  
-  dailySales: this.hourlyFigures
+      this.cookiesSoldPerHour.push(hourlySales);
+      this.totalCookiesSold += hourlySales;
+    }
+  }
 }
 //Store the results for each location in a separate array... perhaps as a property of the object representing that location
-salesByStore.push(firstAndPike.dailySales);
+firstAndPike.hourlyFigures();
+salesByStore.push(firstAndPike.cookiesSoldPerHour);
 
 //
 function randomizer(min, max) {
-  let min = Math.ceil(min);
-  let max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
   let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
   return randomNumber;
 }
 
-let num = firstAndPike.randomizeCustomersPerHour();
-
-console.log(`min: ${ firstAndPike.minHourlyCustomers }`);
-console.log(`max ${ firstAndPike.maxHourlyCustomers }`);
-console.log(`avg: ${ firstAndPike.avgCookiesPerSale }`);
-console.log(`Randomizer: ${ num }`);
-console.log(`1st and Pike: ${ salesByStore.toString() }`);
+function main() {
+  //Store the results for each location in a separate array... perhaps as a property of the object representing that location
+  firstAndPike.hourlyFigures();
+  salesByStore.push(firstAndPike.cookiesSoldPerHour);
+}
