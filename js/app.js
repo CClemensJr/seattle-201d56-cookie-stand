@@ -2,7 +2,7 @@
 
 const hoursOfOperation = ["6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm"];
 const locations = ["First and Pike", "SeaTac Airport", "Seattle Center", "Capitol Hill", "Alki"];
-
+let allStores = [];
 let salesByStore = [];
 
 /*********************
@@ -124,18 +124,23 @@ function main() {
   //Store the results for each location in a separate array... perhaps as a property of the object representing that location
   firstAndPike.hourlyFigures();
   salesByStore.push(firstAndPike.cookiesSoldPerHour);
+  allStores.push(firstAndPike);
 
   seaTacAirport.hourlyFigures();
   salesByStore.push(seaTacAirport.cookiesSoldPerHour);
+  allStores.push(seaTacAirport)
 
   seattleCenter.hourlyFigures();
   salesByStore.push(seattleCenter.cookiesSoldPerHour);
+  allStores.push(seattleCenter)
 
   capitolHill.hourlyFigures();
   salesByStore.push(capitolHill.cookiesSoldPerHour);
+  allStores.push(capitolHill)
 
   alki.hourlyFigures();
   salesByStore.push(alki.cookiesSoldPerHour);
+  allStores.push(alki)
 }
 
 function displayData() {
@@ -154,6 +159,12 @@ function displayData() {
       newLI.appendChild(newLIContent);
       document.body.appendChild(newLI);
     }
+
+    let newLI = document.createElement("li");
+    let newLIContent = document.createTextNode(`Total: ${ allStores[i].totalCookiesSold }`);
+
+    newLI.appendChild(newLIContent);
+    document.body.appendChild(newLI);
   }
 }
 
