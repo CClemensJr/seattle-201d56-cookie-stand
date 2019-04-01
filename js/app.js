@@ -7,7 +7,7 @@
 //Alki
 const hoursOfOperation = ["6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm"];
 
-let dailySales = [];
+let salesByStore = [];
 
 //1st and pike
 let firstAndPike = {
@@ -29,11 +29,12 @@ let firstAndPike = {
     }
 
     return salesArray;
-  }
+  },
   
-  //Store the results for each location in a separate array... perhaps as a property of the object representing that location
-  let dailySales
+  dailySales: this.hourlyFigures();
 }
+//Store the results for each location in a separate array... perhaps as a property of the object representing that location
+salesByStore.push(firstAndPike.dailySales);
 
 
 //Display the values of each array as unordered lists in the browser
