@@ -24,7 +24,7 @@ body {
     z-index: 10000;
   }
 
-  #header nav {
+  #header section nav {
     height: 5em;
     left: 0;
     line-height: 5em;
@@ -33,18 +33,21 @@ body {
     width: 100%;
   }
 
-  #header nav ul {
-    width: 100%;
+  #header section:last-of-type nav ul:first-of-type {
+    float: left;
   }
-
-  #header nav ul li {
+  
+  #header section:last-of-type nav ul:last-of-type {
+    float: right;
+  }
+  
+  #header section:last-of-type nav ul li {
     display: inline-block;
     font-size: 0.9em;
-    position: relative;
     text-align: center;
   }
-
-  #header nav ul li a {
+  
+  #header section:last-of-type nav ul li a {
     color: #e0c778;
     display: block;
     height: 3em;
