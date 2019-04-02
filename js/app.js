@@ -49,106 +49,113 @@ Store.prototype.showSales = function() {
   alert("Here be showsales");
 }
 
-function createStores() {}
-//1st and pike
-let firstAndPike = {
-  minHourlyCustomers: 23,
-  maxHourlyCustomers: 65,
-  avgCookiesPerSale: 6.3,
-  totalCookiesSold: 0,
-  cookiesSoldPerHour: [],
-  
-  hourlyFigures: function() {
-    for (let i = 0; i < hoursOfOperation.length; i++)
-    {
-      let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
-      let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
-
-      this.cookiesSoldPerHour.push(hourlySales);
-      this.totalCookiesSold += hourlySales;
-    }
+// This function uses a for loop to instantiate all stores
+function createStores() {
+  for (let i = 0; i < locations.length; i++)
+  {
+    new Store(locatios[i], minHourlyCustomersPerStore[i], maxHourlyCustomersPerStore[i], avgCookiesPerSalePerStore[i]);
   }
 }
+
+//1st and pike
+// let firstAndPike = {
+//   minHourlyCustomers: 23,
+//   maxHourlyCustomers: 65,
+//   avgCookiesPerSale: 6.3,
+//   totalCookiesSold: 0,
+//   cookiesSoldPerHour: [],
+  
+//   hourlyFigures: function() {
+//     for (let i = 0; i < hoursOfOperation.length; i++)
+//     {
+//       let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+//       let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
+
+//       this.cookiesSoldPerHour.push(hourlySales);
+//       this.totalCookiesSold += hourlySales;
+//     }
+//   }
+// }
 
 //SeaTac Airport
-let seaTacAirport = {
-  minHourlyCustomers: 3,
-  maxHourlyCustomers: 24,
-  avgCookiesPerSale: 1.2,
-  totalCookiesSold: 0,
-  cookiesSoldPerHour: [],
+// let seaTacAirport = {
+//   minHourlyCustomers: 3,
+//   maxHourlyCustomers: 24,
+//   avgCookiesPerSale: 1.2,
+//   totalCookiesSold: 0,
+//   cookiesSoldPerHour: [],
 
-  hourlyFigures: function() {
-    for (let i = 0; i < hoursOfOperation.length; i++)
-    {
-      let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
-      let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
+//   hourlyFigures: function() {
+//     for (let i = 0; i < hoursOfOperation.length; i++)
+//     {
+//       let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+//       let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
 
-      this.cookiesSoldPerHour.push(hourlySales);
-      this.totalCookiesSold += hourlySales;
-    }
-  }
-}
+//       this.cookiesSoldPerHour.push(hourlySales);
+//       this.totalCookiesSold += hourlySales;
+//     }
+//   }
+// }
 
 //Seattle Center
-let seattleCenter = {
-  minHourlyCustomers: 11,
-  maxHourlyCustomers: 38,
-  avgCookiesPerSale: 3.7,
-  totalCookiesSold: 0,
-  cookiesSoldPerHour: [],
+// let seattleCenter = {
+//   minHourlyCustomers: 11,
+//   maxHourlyCustomers: 38,
+//   avgCookiesPerSale: 3.7,
+//   totalCookiesSold: 0,
+//   cookiesSoldPerHour: [],
 
-  hourlyFigures: function() {
-    for (let i = 0; i < hoursOfOperation.length; i++)
-    {
-      let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
-      let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
+//   hourlyFigures: function() {
+//     for (let i = 0; i < hoursOfOperation.length; i++)
+//     {
+//       let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+//       let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
 
-      this.cookiesSoldPerHour.push(hourlySales);
-      this.totalCookiesSold += hourlySales;
-    }
-  }
-}
+//       this.cookiesSoldPerHour.push(hourlySales);
+//       this.totalCookiesSold += hourlySales;
+//     }
+//   }
+// }
 
 //Capitol Hill
-let capitolHill = {
-  minHourlyCustomers: 20,
-  maxHourlyCustomers: 38,
-  avgCookiesPerSale: 2.3,
-  totalCookiesSold: 0,
-  cookiesSoldPerHour: [],
+// let capitolHill = {
+//   minHourlyCustomers: 20,
+//   maxHourlyCustomers: 38,
+//   avgCookiesPerSale: 2.3,
+//   totalCookiesSold: 0,
+//   cookiesSoldPerHour: [],
   
-  hourlyFigures: function() {
-    for (let i = 0; i < hoursOfOperation.length; i++)
-    {
-      let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
-      let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
+//   hourlyFigures: function() {
+//     for (let i = 0; i < hoursOfOperation.length; i++)
+//     {
+//       let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+//       let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
 
-      this.cookiesSoldPerHour.push(hourlySales);
-      this.totalCookiesSold += hourlySales;
-    }
-  }
-}
+//       this.cookiesSoldPerHour.push(hourlySales);
+//       this.totalCookiesSold += hourlySales;
+//     }
+//   }
+// }
 
 //Alki
-let alki = {
-  minHourlyCustomers: 2,
-  maxHourlyCustomers: 16,
-  avgCookiesPerSale: 4.6,
-  totalCookiesSold: 0,
-  cookiesSoldPerHour: [],
+// let alki = {
+//   minHourlyCustomers: 2,
+//   maxHourlyCustomers: 16,
+//   avgCookiesPerSale: 4.6,
+//   totalCookiesSold: 0,
+//   cookiesSoldPerHour: [],
 
-  hourlyFigures: function() {
-    for (let i = 0; i < hoursOfOperation.length; i++)
-    {
-      let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
-      let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
+//   hourlyFigures: function() {
+//     for (let i = 0; i < hoursOfOperation.length; i++)
+//     {
+//       let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+//       let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
 
-      this.cookiesSoldPerHour.push(hourlySales);
-      this.totalCookiesSold += hourlySales;
-    }
-  }
-}
+//       this.cookiesSoldPerHour.push(hourlySales);
+//       this.totalCookiesSold += hourlySales;
+//     }
+//   }
+// }
 
 // The randomizer takes a min and max and returns a random integer. Borrowed from MDN.
 function randomizer(min, max) {
@@ -161,28 +168,28 @@ function randomizer(min, max) {
 }
 
 // Main instantiates all of the object literals
-function main() {
-  //Store the results for each location in a separate array... perhaps as a property of the object representing that location
-  firstAndPike.hourlyFigures();
-  salesByStore.push(firstAndPike.cookiesSoldPerHour);
-  allStores.push(firstAndPike);
+// function main() {
+//   //Store the results for each location in a separate array... perhaps as a property of the object representing that location
+//   firstAndPike.hourlyFigures();
+//   salesByStore.push(firstAndPike.cookiesSoldPerHour);
+//   allStores.push(firstAndPike);
 
-  seaTacAirport.hourlyFigures();
-  salesByStore.push(seaTacAirport.cookiesSoldPerHour);
-  allStores.push(seaTacAirport)
+//   seaTacAirport.hourlyFigures();
+//   salesByStore.push(seaTacAirport.cookiesSoldPerHour);
+//   allStores.push(seaTacAirport)
 
-  seattleCenter.hourlyFigures();
-  salesByStore.push(seattleCenter.cookiesSoldPerHour);
-  allStores.push(seattleCenter)
+//   seattleCenter.hourlyFigures();
+//   salesByStore.push(seattleCenter.cookiesSoldPerHour);
+//   allStores.push(seattleCenter)
 
-  capitolHill.hourlyFigures();
-  salesByStore.push(capitolHill.cookiesSoldPerHour);
-  allStores.push(capitolHill)
+//   capitolHill.hourlyFigures();
+//   salesByStore.push(capitolHill.cookiesSoldPerHour);
+//   allStores.push(capitolHill)
 
-  alki.hourlyFigures();
-  salesByStore.push(alki.cookiesSoldPerHour);
-  allStores.push(alki)
-}
+//   alki.hourlyFigures();
+//   salesByStore.push(alki.cookiesSoldPerHour);
+//   allStores.push(alki)
+// }
 
 function displayData() {
   for (let i = 0; i < locations.length; i++)
@@ -211,3 +218,4 @@ function displayData() {
 
 // main();
 // displayData();
+createStores();
