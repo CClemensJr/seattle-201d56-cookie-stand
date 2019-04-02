@@ -20,3 +20,12 @@
     width: 100%;
     z-index: 10000;
   }
+
+  #header nav {
+    height: 3em;
+    left: 5em;
+    line-height: 3em;
+    position: absolute;
+    right: 5em;
+    top: 0;
+  }
