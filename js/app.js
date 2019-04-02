@@ -9,6 +9,21 @@ let salesByStore = [];
 * STORE OBJECTS
 **/
 
+// REFACTOR IDEA FROM CLASS
+// let store = {
+//   minHourlyCustomers: 23,
+//   maxHourlyCustomers: 65,
+//   avgCookiesPerSale: 6.3,
+//   totalCookiesSold: 0,
+//   locationName: "Store Name",
+//   cookiesSoldPerHour: [],
+//   customersPerHour: [],
+
+//   calcCustomersPerHour: function () {},
+//   calcCookiesPerHour: function() {},
+//   render: function() {}
+// }
+
 //1st and pike
 let firstAndPike = {
   minHourlyCustomers: 23,
@@ -109,7 +124,7 @@ let alki = {
   }
 }
 
-// The randomizer takes a min and max and returns a random integer.
+// The randomizer takes a min and max and returns a random integer. Borrowed from MDN.
 function randomizer(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
