@@ -53,7 +53,7 @@ Store.prototype.showSales = function() {
 function createStores() {
   for (let i = 0; i < locations.length; i++)
   {
-    new Store(locatios[i], minHourlyCustomersPerStore[i], maxHourlyCustomersPerStore[i], avgCookiesPerSalePerStore[i]);
+    new Store(locations[i], minHourlyCustomersPerStore[i], maxHourlyCustomersPerStore[i], avgCookiesPerSalePerStore[i]);
   }
 }
 
