@@ -35,18 +35,27 @@ function Store(locationName, minHourlyCustomers, maxHourlyCustomers, avgCookiesP
   this.totalCookiesSold = 0;
   this.cookiesSoldPerHour = [];
 
-  this.getCookiesSoldPerHour();
-  this.showSales();
+  this.calcCookiesSoldPerHour();
+  this.renderSales();
 
   allStores.push(this);
 }
 
-Store.prototype.getCookiesSoldPerHour = function() {
-  alert("Here be getCookiesSold");
+// This method populates the cookiesSoldPerHour array upon instantiation
+Store.prototype.calcCookiesSoldPerHour = function() {
+  for (let i = 0; i < hoursOfOperation.length; i++)
+  {
+    let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
+    let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
+
+    this.cookiesSoldPerHour.push(hourlySales);
+    this.totalCookiesSold += hourlySales;
+  }
 }
 
-Store.prototype.showSales = function() {
-  alert("Here be showsales");
+// This method populates the html table upon instantiation
+Store.prototype.renderSales = function() {
+
 }
 
 // This function uses a for loop to instantiate all stores
@@ -66,14 +75,7 @@ function createStores() {
 //   cookiesSoldPerHour: [],
   
 //   hourlyFigures: function() {
-//     for (let i = 0; i < hoursOfOperation.length; i++)
-//     {
-//       let customersPerHour = randomizer(this.minHourlyCustomers, this.maxHourlyCustomers);
-//       let hourlySales = Math.floor(customersPerHour * this.avgCookiesPerSale)
-
-//       this.cookiesSoldPerHour.push(hourlySales);
-//       this.totalCookiesSold += hourlySales;
-//     }
+    
 //   }
 // }
 
