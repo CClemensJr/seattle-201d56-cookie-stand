@@ -23,6 +23,22 @@ let salesByStore = [];
 //   store.calcCookiesPerHour: function() {},
 //   store.render: function() {}
 
+// Replace object literals with a constructor
+function Store(locationName, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerSale) {
+  this.locationName = locationName;
+  this.minHourlyCustomers = minHourlyCustomers;
+  this.maxHourlyCustomers = maxHourlyCustomers;
+  this.avgCookiesPerSale = avgCookiesPerSale;
+  this.totalCookiesSold = 0;
+  this.cookiesSoldPerHour = [];
+
+  this.getCookiesSoldPerHour();
+  this.showSales();
+
+  allStores.push(this);
+}
+
+
 //1st and pike
 let firstAndPike = {
   minHourlyCustomers: 23,
