@@ -63,7 +63,7 @@ Store.prototype.calcCookiesSoldPerHour = function() {
 
 // This method populates the html table upon instantiation
 Store.prototype.renderSales = function() {
-  console.table(this);
+  
 }
 
 
@@ -86,6 +86,13 @@ function createStores() {
   {
     new Store(locations[i], minHourlyCustomersPerStore[i], maxHourlyCustomersPerStore[i], avgCookiesPerSalePerStore[i]);
   }
+}
+
+function createTable() {
+  //I need the following:
+  //A thead
+  //A trow with the operating hours
+  //A tbody that rows can be appended to
 }
 
 createStores();
