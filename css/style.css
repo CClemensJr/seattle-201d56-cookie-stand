@@ -1,2 +1,22 @@
+/* Salmon Colors */
+/* Dark Green: #252624 */
+/* Dark Orange: #994726 */
+/* Mustard Yellow: #e0c778 */
+/* Light Gray: #d5d3cd */
+/* Gold: #ba9648 */
+/* Charcoal: #262732 */
+
+
+
 /* Nav Styling */
-  
+  #header {
+    background: #252624;
+    box-shadow: 0 0 0.15em rgba(0, 0, 0, 0.1);
+    height: 3em;
+    left: 0;
+    line-height: 3em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
