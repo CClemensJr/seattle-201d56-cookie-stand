@@ -24,7 +24,15 @@ body {
     z-index: 10000;
   }
 
-  #header section nav {
+  #header section:first-of-type {
+    width: 100%;
+  }
+  
+
+  #header section:last-of-type {
+    display: none;
+  }
+  #header section:last-of-type nav {
     height: 5em;
     left: 0;
     line-height: 5em;
@@ -35,10 +43,12 @@ body {
 
   #header section:last-of-type nav ul:first-of-type {
     float: left;
+    margin-left: 20%;
   }
   
   #header section:last-of-type nav ul:last-of-type {
     float: right;
+    margin-right: 20%;
   }
   
   #header section:last-of-type nav ul li {
