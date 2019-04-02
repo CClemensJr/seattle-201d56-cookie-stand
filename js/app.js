@@ -63,7 +63,28 @@ Store.prototype.calcCookiesSoldPerHour = function() {
 
 // This method populates the html table upon instantiation
 Store.prototype.renderSales = function() {
-  
+  let tTable = document.getElementById("table");
+  let tBody = document.createElement("tbody");
+  let tFoot = document.createElement("tfoot");
+  let tRow = document.createElement("tr");
+  let tD = document.createElement("td");
+  let tDContent = document.createTextNode(this.locationName);
+
+  tD.appendChild(tDContent);
+  tRow.appendChild(tD);
+
+  for (let i = 0; i < hoursOfOperation.length; i++) {
+    tD = document.createElement("td");
+
+    tDContent = document.createTextNode(this.cookiesSoldPerHour[i]);
+
+    tD.appendChild(tDContent);
+    tRow.appendChild(tD);
+  }
+
+  tBody.appendChild(tRow);
+  tTable.appendChild(tBody);
+  tTable.appendChild(tFoot);
 }
 
 
@@ -88,20 +109,19 @@ function createStores() {
   }
 }
 
+// This function creates the basic table
 function createTable() {
   let tHead = document.createElement("thead");
   let tRow = document.createElement("tr");
-  let tHContent = document.createTextNode("    ");
+  let tH = document.createElement("th");
+  let tHContent = document.createTextNode("");
+
+  tH.appendChild(tHContent);
+  tRow.appendChild(tH);
 
   for (let i = 0; i < hoursOfOperation.length; i++)
   {
-    let tH = document.createElement("th");
-
-    if (i === 0)
-    {
-      tH.appendChild(tHContent);
-      tRow.appendChild(tH);
-    }
+    tH = document.createElement("th");
 
     tHContent = document.createTextNode(`${ hoursOfOperation[i] }`);
 
@@ -109,14 +129,10 @@ function createTable() {
     tRow.appendChild(tH);
   }
 
-  let tBody = document.createElement("tbody");
-  let tFoot = document.createElement("tfoot");
   let tTable = document.getElementById("table");
-  
+
   tHead.appendChild(tRow);
   tTable.appendChild(tHead);
-  tTable.appendChild(tBody);
-  tTable.appendChild(tFoot);
 
   document.body.appendChild(tTable);
 }
