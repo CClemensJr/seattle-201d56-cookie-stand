@@ -89,25 +89,36 @@ function createStores() {
 }
 
 function createTable() {
-  //I need the following:
-  //A thead
   let tHead = document.createElement("thead");
-  //A trow 
   let tRow = document.createElement("tr");
-  //A bunch of th's with the operating hours
-  let tH = document.createElement("th");
-  let tHContent = document.createTextNode("Test");
-  //A tbody that rows can be appended to
-  let tBody = document.createElement("tbody");
-  // A tfoot that totals can be attached to
-  let tFoot = document.createElement("tfoot");
+  let tHContent = document.createTextNode("    ");
 
-  tH.appendChild(tHContent);
-  tRow.appendChild(tH);
-  tHead.appendChild(tRow);
+  for (let i = 0; i < hoursOfOperation.length; i++)
+  {
+    let tH = document.createElement("th");
+
+    if (i === 0)
+    {
+      tH.appendChild(tHContent);
+      tRow.appendChild(tH);
+    }
+
+    tHContent = document.createTextNode(`${ hoursOfOperation[i] }`);
+
+    tH.appendChild(tHContent);
+    tRow.appendChild(tH);
+  }
+
+  let tBody = document.createElement("tbody");
+  let tFoot = document.createElement("tfoot");
+  let tTable = document.getElementById("table");
   
-  let htmlTable = document.getElementsByTagName("table");
-  htmlTable.appendChild(tHead);
+  tHead.appendChild(tRow);
+  tTable.appendChild(tHead);
+  tTable.appendChild(tBody);
+  tTable.appendChild(tFoot);
+
+  document.body.appendChild(tTable);
 }
 
 function initializer() {
