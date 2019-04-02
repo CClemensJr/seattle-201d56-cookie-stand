@@ -6,15 +6,18 @@
 /* Gold: #ba9648 */
 /* Charcoal: #262732 */
 
+body {
+  width: 80%;
+}
 
 
 /* Nav Styling */
   #header {
     background: #252624;
     box-shadow: 0 0 0.15em rgba(0, 0, 0, 0.1);
-    height: 3em;
+    height: 5em;
     left: 0;
-    line-height: 3em;
+    line-height: 5em;
     position: fixed;
     top: 0;
     width: 100%;
@@ -22,22 +25,26 @@
   }
 
   #header nav {
-    height: 3em;
-    left: 5em;
-    line-height: 3em;
+    height: 5em;
+    left: 0;
+    line-height: 5em;
+    width: 100%;
     position: absolute;
-    right: 5em;
     top: 0;
   }
 
-  #header nav ul:first-of-type {
-    margin: 0;
+  #header nav ul {
+    position: fixed;
   }
 
-  #header nav ul:first-of-type li {
+  #header nav ul li {
     display: inline-block;
+    text-align: center;
+    width: 10em;
   }
 
-  #header nav ul:last-of-type li {
+  #header nav li img {
     display: inline-block;
+    vertical-align: center;
+    width: 10em;
   }

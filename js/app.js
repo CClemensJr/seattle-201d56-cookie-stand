@@ -18,11 +18,10 @@ let salesByStore = [];
 //   locationName: "Store Name",
 //   cookiesSoldPerHour: [],
 //   customersPerHour: [],
-
-//   calcCustomersPerHour: function () {},
-//   calcCookiesPerHour: function() {},
-//   render: function() {}
 // }
+//   store.calcCustomersPerHour: function () {},
+//   store.calcCookiesPerHour: function() {},
+//   store.render: function() {}
 
 //1st and pike
 let firstAndPike = {
