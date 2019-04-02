@@ -91,8 +91,20 @@ function createStores() {
 function createTable() {
   //I need the following:
   //A thead
-  //A trow with the operating hours
+  let tHead = document.createElement("thead");
+  //A trow 
+  let tRow = document.createElement("tr");
+  //A bunch of th's with the operating hours
+  let tH = document.createElement("th");
+  let tHContent = document.createTextNode("Test");
   //A tbody that rows can be appended to
+  let tBody = document.createElement("tbody");
+  // A tfoot that totals can be attached to
+  let tFoot = document.createElement("tfoot");
+
+  tH.appendChild(tHContent);
+  tRow.appendChild(tH);
+  tHead.appendChild(tRow);
 }
 
 createStores();
