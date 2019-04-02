@@ -26,6 +26,10 @@ let salesByStore = [];
 //   store.calcCookiesPerHour: function() {},
 //   store.render: function() {}
 
+
+/*********************
+ * STORE CONSTRUCTOR 
+ **/
 // Replace object literals with a constructor
 function Store(locationName, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerSale) {
   this.locationName = locationName;
@@ -41,6 +45,10 @@ function Store(locationName, minHourlyCustomers, maxHourlyCustomers, avgCookiesP
   allStores.push(this);
 }
 
+
+/*********************
+ * PROTOTYPE METHODS
+ **/
 // This method populates the cookiesSoldPerHour array upon instantiation
 Store.prototype.calcCookiesSoldPerHour = function() {
   for (let i = 0; i < hoursOfOperation.length; i++)
@@ -55,7 +63,21 @@ Store.prototype.calcCookiesSoldPerHour = function() {
 
 // This method populates the html table upon instantiation
 Store.prototype.renderSales = function() {
+  console.table(this);
+}
 
+
+/*********************
+ * HELPER FUNCTIONS
+ **/
+// The randomizer takes a min and max and returns a random integer. Inpired by MDN documentation.
+function randomizer(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  return randomNumber;
 }
 
 // This function uses a for loop to instantiate all stores
@@ -66,42 +88,4 @@ function createStores() {
   }
 }
 
-// The randomizer takes a min and max and returns a random integer. Borrowed from MDN.
-function randomizer(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-
-  let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
-  return randomNumber;
-}
-
-
-function displayData() {
-  for (let i = 0; i < locations.length; i++)
-  {
-    let newHeading = document.createElement("h1");
-    let newTitle = document.createTextNode(`${ locations[i] }`);
-    
-    newHeading.appendChild(newTitle);
-    document.body.appendChild(newHeading);
-    
-    for (let j = 0; j < salesByStore[i].length; j++) {
-      let newLI = document.createElement("li");
-      let newLIContent = document.createTextNode(`${ hoursOfOperation [j] }: ${ salesByStore[i][j] }`);
-      
-      newLI.appendChild(newLIContent);
-      document.body.appendChild(newLI);
-    }
-
-    let newLI = document.createElement("li");
-    let newLIContent = document.createTextNode(`Total: ${ allStores[i].totalCookiesSold }`);
-
-    newLI.appendChild(newLIContent);
-    document.body.appendChild(newLI);
-  }
-}
-
-// main();
-// displayData();
 createStores();
