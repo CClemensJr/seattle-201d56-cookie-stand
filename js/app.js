@@ -105,6 +105,14 @@ function createTable() {
   tH.appendChild(tHContent);
   tRow.appendChild(tH);
   tHead.appendChild(tRow);
+  
+  let htmlTable = document.getElementsByTagName("table");
+  htmlTable.appendChild(tHead);
 }
 
-createStores();
+function initializer() {
+  createTable();
+  createStores();
+}
+
+initializer();
