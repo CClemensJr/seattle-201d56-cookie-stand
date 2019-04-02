@@ -38,6 +38,13 @@ function Store(locationName, minHourlyCustomers, maxHourlyCustomers, avgCookiesP
   allStores.push(this);
 }
 
+Store.prototype.getCookiesSoldPerHour = function() {
+  alert("Here be getCookiesSold");
+}
+
+Store.prototype.showSales = function() {
+  alert("Here be showsales");
+}
 
 //1st and pike
 let firstAndPike = {
