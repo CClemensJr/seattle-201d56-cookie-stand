@@ -29,3 +29,15 @@
     right: 5em;
     top: 0;
   }
+
+  #header nav ul:first-of-type {
+    margin: 0;
+  }
+
+  #header nav ul:first-of-type li {
+    display: inline-block;
+  }
+
+  #header nav ul:last-of-type li {
+    display: inline-block;
+  }
