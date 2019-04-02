@@ -34,16 +34,18 @@ body {
   }
 
   #header nav ul {
-    position: fixed;
+    margin: 0;
+    width: 100%;
   }
 
   #header nav ul li {
+    color: #e0c778;
+    font-size: 0.9em;
     display: inline-block;
     text-align: center;
-    width: 10em;
   }
 
-  #header nav li img {
+  #header img {
     display: inline-block;
     vertical-align: center;
     width: 10em;
