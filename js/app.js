@@ -187,12 +187,19 @@ function initializer() {
   renderTable();
 }
 
+initializer();
 
 /*********************
  * EVENT HANDLING
  **/
 const formElement = document.getElementById("form");
 
-formElement.addEventListener("submit", event => alert("It submitted!"));
+formElement.addEventListener("submit", function(event) {
+  event.preventDefault();
 
-initializer();
+  new Store(event.target.locationName.value, 
+            event.target.minCustomers.value, 
+            event.target.maxCustomers.value, 
+            event.target.avgSale.value);
+});
+
