@@ -1,5 +1,8 @@
 'use strict';
 
+/*********************
+ * GLOBAL VARIABLES 
+ **/
 const hoursOfOperation = ["6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm"];
 const locations = ["First and Pike", "SeaTac Airport", "Seattle Center", "Capitol Hill", "Alki"];
 const minHourlyCustomersPerStore = [23, 3, 11, 20, 2];
@@ -55,11 +58,13 @@ Store.prototype.renderSales = function() {
   let tTable = document.getElementById("table");
   let tBody = document.createElement("tbody");
   let tRow = document.createElement("tr");
-  let tD = document.createElement("td");
-  let tDContent = document.createTextNode(this.locationName);
+  let tH = document.createElement("th");
+  let tD;
+  let tHContent = document.createTextNode(this.locationName);
+  let tDContent;
 
-  tD.appendChild(tDContent);
-  tRow.appendChild(tD);
+  tH.appendChild(tHContent);
+  tRow.appendChild(tH);
 
   for (let i = 0; i < hoursOfOperation.length; i++) {
     tD = document.createElement("td");
@@ -128,7 +133,7 @@ function renderColumnNames() {
   }
 
   tH = document.createElement("th");
-  tHContent = document.createTextNode("Total Sales by Store");
+  tHContent = document.createTextNode("Total Sales");
 
   tH.appendChild(tHContent);
   tRow.appendChild(tH);
@@ -166,7 +171,7 @@ function renderHourlyTotals() {
   tTable.appendChild(tFoot);
 }
 
-
+// This function creates all stores and renders the table
 function initializer() {
   createStores();
   renderTable();
