@@ -103,7 +103,12 @@ function createStores() {
 }
 
 // This function creates the basic table
-function createTable() {
+function renderTable() {
+  renderColumnNames();
+  renderHourlyTotals();
+}
+
+function renderColumnNames() {
   let tHead = document.createElement("thead");
   let tRow = document.createElement("tr");
   let tH = document.createElement("th");
@@ -161,10 +166,10 @@ function renderHourlyTotals() {
   tTable.appendChild(tFoot);
 }
 
+
 function initializer() {
-  createTable();
   createStores();
-  renderHourlyTotals();
+  renderTable();
 }
 
 initializer();
