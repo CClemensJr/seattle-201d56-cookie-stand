@@ -201,5 +201,9 @@ formElement.addEventListener("submit", function(event) {
             event.target.minCustomers.value, 
             event.target.maxCustomers.value, 
             event.target.avgSale.value);
+
+  tFoot.innerHTML = "";
+
+  renderHourlyTotals();
 });
 
