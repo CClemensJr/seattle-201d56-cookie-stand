@@ -15,7 +15,16 @@ let hourlyTotalSales = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
  * DOM VARIABLES 
  **/
 let tTable = document.getElementById("table");
+
+let tHead = document.createElement("thead");
 let tBody = document.createElement("tbody");
+let tFoot = document.createElement("tfoot");
+
+let tRow = document.createElement("tr");
+let tH = document.createElement("th");
+let tD = document.createElement("td");
+
+let textContent = document.createTextNode("");
 
 /*********************
  * STORE CONSTRUCTOR 
@@ -117,7 +126,7 @@ function renderTable() {
 }
 
 function renderColumnNames() {
-  let tHead = document.createElement("thead");
+  // let tHead = document.createElement("thead");
   let tRow = document.createElement("tr");
   let tH = document.createElement("th");
   let tHContent = document.createTextNode("");
@@ -149,7 +158,7 @@ function renderColumnNames() {
 
 // THis function renders the last row of the table
 function renderHourlyTotals() {
-  let tFoot = document.createElement("tfoot");
+  // let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
   let tH = document.createElement("th");
   let tHContent = document.createTextNode("");
