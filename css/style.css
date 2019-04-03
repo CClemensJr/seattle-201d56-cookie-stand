@@ -92,10 +92,9 @@
   table {
     background: #d5d3cd;
     border: 2px solid #252624 ;
-    /* margin-left: 20%;
-    margin-right: 20%; */
+    margin-left: 10%;
+    margin-right: 30%;
   }
-
 
   table thead {
     background-color: #262732;
@@ -144,17 +143,21 @@
   }
 
   main section:last-of-type form {
-
+    background: yellow;
+    margin-right: 2.5%;
   }
 
   main section:last-of-type form fieldset legend {
     display: block;
+    text-align: center;
   }
   
   main section:last-of-type form fieldset label {
     display: block;
+    text-align: left;
   }
 
   main section:last-of-type form fieldset input {
     display: inline;
+    text-align: right;
   }
