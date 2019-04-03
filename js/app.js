@@ -193,6 +193,6 @@ function initializer() {
  **/
 const formElement = document.getElementById("form");
 
-formElement.addEventListener("click", event => alert("It clicked!"));
+formElement.addEventListener("submit", event => alert("It submitted!"));
 
 initializer();
