@@ -102,3 +102,19 @@
     padding: .1em;
     text-align: center;
   }
+
+  table tbody {
+    text-align: center;
+  }
+
+  table tbody tr th {
+    border-right: .1em solid #994726;
+    border-bottom: .1em solid #ba9648;
+    font-size: 1.10em;
+    text-align: left;
+  }
+
+  table tbody tr td {
+    border-right: .1em solid #994726;
+    border-bottom: .1em solid #ba9648;
+  }
