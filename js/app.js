@@ -65,7 +65,6 @@ Store.prototype.calcCookiesSoldPerHour = function() {
 Store.prototype.renderSales = function() {
   let tTable = document.getElementById("table");
   let tBody = document.createElement("tbody");
-  let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
   let tD = document.createElement("td");
   let tDContent = document.createTextNode(this.locationName);
@@ -82,9 +81,14 @@ Store.prototype.renderSales = function() {
     tRow.appendChild(tD);
   }
 
+  tD = document.createElement("td");
+  tDContent = document.createTextNode(this.totalCookiesSold);
+  
+
+  tD.appendChild(tDContent);
+  tRow.appendChild(tD);
   tBody.appendChild(tRow);
   tTable.appendChild(tBody);
-  tTable.appendChild(tFoot);
 }
 
 
