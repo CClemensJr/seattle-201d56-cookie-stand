@@ -6,7 +6,7 @@ const minHourlyCustomersPerStore = [23, 3, 11, 20, 2];
 const maxHourlyCustomersPerStore = [65, 24, 38, 38, 16];
 const avgCookiesPerSalePerStore = [6.3, 1.2, 3.7, 2.3, 4.6];
 let allStores = [];
-let salesByStore = [];
+let hourlyTotalSales = [];
 
 /*********************
 * STORE OBJECTS
@@ -58,6 +58,8 @@ Store.prototype.calcCookiesSoldPerHour = function() {
 
     this.cookiesSoldPerHour.push(hourlySales);
     this.totalCookiesSold += hourlySales;
+
+    hourlyTotalSales[i] += hourlySales;
   }
 }
 
@@ -132,6 +134,13 @@ function createTable() {
     tH.appendChild(tHContent);
     tRow.appendChild(tH);
   }
+
+  tH = document.createElement("th");
+  tHContent = document.createTextNode("Total Sales by Store");
+
+  tH.appendChild(tHContent);
+  tRow.appendChild(tH);
+
 
   let tTable = document.getElementById("table");
 
