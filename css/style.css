@@ -95,3 +95,10 @@
     background-color: #262732;
     color: #e0c778;
   }
+  table thead th {
+    border-left: .1em solid #994726;
+    height: 3em;
+    line-height: 3em;
+    padding: .1em;
+    text-align: center;
+  }

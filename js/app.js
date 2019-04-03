@@ -11,6 +11,11 @@ const avgCookiesPerSalePerStore = [6.3, 1.2, 3.7, 2.3, 4.6];
 let allStores = [];
 let hourlyTotalSales = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+/*********************
+ * DOM VARIABLES 
+ **/
+let tTable = document.getElementById("table");
+let tBody = document.createElement("tbody");
 
 /*********************
  * STORE CONSTRUCTOR 
@@ -55,8 +60,6 @@ Store.prototype.calcCookiesSoldPerHour = function() {
 
 // This method populates the html table upon instantiation
 Store.prototype.renderSales = function() {
-  let tTable = document.getElementById("table");
-  let tBody = document.createElement("tbody");
   let tRow = document.createElement("tr");
   let tH = document.createElement("th");
   let tD;
@@ -138,9 +141,6 @@ function renderColumnNames() {
   tH.appendChild(tHContent);
   tRow.appendChild(tH);
 
-
-  let tTable = document.getElementById("table");
-
   tHead.appendChild(tRow);
   tTable.appendChild(tHead);
 
@@ -149,7 +149,6 @@ function renderColumnNames() {
 
 // THis function renders the last row of the table
 function renderHourlyTotals() {
-  let tTable = document.getElementById("table");
   let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
   let tD = document.createElement("td");
