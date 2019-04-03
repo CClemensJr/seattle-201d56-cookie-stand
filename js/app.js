@@ -137,9 +137,10 @@ function createTable() {
   document.body.appendChild(tTable);
 }
 
+// THis function renders the last row of the table
 function renderHourlyTotals() {
   let tTable = document.getElementById("table");
-  let tBody = document.createElement("tbody");
+  let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
   let tD = document.createElement("td");
   let tDContent = document.createTextNode("");
@@ -156,8 +157,8 @@ function renderHourlyTotals() {
     tRow.appendChild(tD);
   }
 
-  tBody.appendChild(tRow);
-  tTable.appendChild(tBody);
+  tFoot.appendChild(tRow);
+  tTable.appendChild(tFoot);
 }
 
 function initializer() {
