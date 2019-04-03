@@ -187,4 +187,12 @@ function initializer() {
   renderTable();
 }
 
+
+/*********************
+ * EVENT HANDLING
+ **/
+const formElement = document.getElementById("form");
+
+
+
 initializer();
