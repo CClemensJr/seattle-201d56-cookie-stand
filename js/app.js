@@ -6,7 +6,7 @@ const minHourlyCustomersPerStore = [23, 3, 11, 20, 2];
 const maxHourlyCustomersPerStore = [65, 24, 38, 38, 16];
 const avgCookiesPerSalePerStore = [6.3, 1.2, 3.7, 2.3, 4.6];
 let allStores = [];
-let hourlyTotalSales = [];
+let hourlyTotalSales = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 /*********************
 * STORE OBJECTS
@@ -150,9 +150,33 @@ function createTable() {
   document.body.appendChild(tTable);
 }
 
+function renderHourlyTotals() {
+  let tTable = document.getElementById("table");
+  let tBody = document.createElement("tbody");
+  let tRow = document.createElement("tr");
+  let tD = document.createElement("td");
+  let tDContent = document.createTextNode("");
+
+  tD.appendChild(tDContent);
+  tRow.appendChild(tD);
+
+  for (let i = 0; i < hourlyTotalSales.length; i++) {
+    tD = document.createElement("td");
+
+    tDContent = document.createTextNode(hourlyTotalSales[i]);
+
+    tD.appendChild(tDContent);
+    tRow.appendChild(tD);
+  }
+
+  tBody.appendChild(tRow);
+  tTable.appendChild(tBody);
+}
+
 function initializer() {
   createTable();
   createStores();
+  renderHourlyTotals();
 }
 
 initializer();
