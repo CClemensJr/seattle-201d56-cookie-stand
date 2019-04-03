@@ -31,27 +31,39 @@
         </header>
 
         <main>
-            <form action="">
-                <fieldset>
-                    <legend>Add or Update a Store</legend>
+            <section>
+                <table id="table"></table>
+            </section>
 
-                    <label for="locationName">Location:</label>
-                    <input type="text" name="locationName">
-
-                    <label for="minCustomers">Minimum # of Customers:</label>
-                    <input type="text" name="minCustomers" id="">
-
-                    <label for="maxCustomers">Maximum # of Customers:</label>
-                    <input type="text" name="maxCustomers" id="">
-
-                    <label for="avgSale">Average # of Cookies Sold Per Sale:</label>
-                    <input type="text" name="avgSale" id="">
-
-                    <input type="submit" value="Submit">
-                </fieldset>
-            </form>
-            
-            <table id="table"></table>
+            <section>
+                <form action="">
+                    <fieldset>
+                        <legend>Add or Update a Store</legend>
+    
+                        <label for="locationName">
+                            Location:
+                            <input type="text" name="locationName" required>
+                        </label>
+    
+                        <label for="minCustomers">
+                            Minimum # of Customers:
+                            <input type="text" name="minCustomers" id="" required>
+                        </label>
+    
+                        <label for="maxCustomers">
+                            Maximum # of Customers:
+                            <input type="text" name="maxCustomers" id="" required>
+                        </label>
+    
+                        <label for="avgSale">
+                            Average Sale:
+                            <input type="text" name="avgSale" id="" required>
+                        </label>
+    
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </section>
         </main>
 
         <footer>
