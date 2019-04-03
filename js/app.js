@@ -6,25 +6,7 @@ const minHourlyCustomersPerStore = [23, 3, 11, 20, 2];
 const maxHourlyCustomersPerStore = [65, 24, 38, 38, 16];
 const avgCookiesPerSalePerStore = [6.3, 1.2, 3.7, 2.3, 4.6];
 let allStores = [];
-let hourlyTotalSales = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-/*********************
-* STORE OBJECTS
-**/
-
-// REFACTOR IDEA FROM CLASS
-// let store = {
-//   minHourlyCustomers: 23,
-//   maxHourlyCustomers: 65,
-//   avgCookiesPerSale: 6.3,
-//   totalCookiesSold: 0,
-//   locationName: "Store Name",
-//   cookiesSoldPerHour: [],
-//   customersPerHour: [],
-// }
-//   store.calcCustomersPerHour: function () {},
-//   store.calcCookiesPerHour: function() {},
-//   store.render: function() {}
+let hourlyTotalSales = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 /*********************
@@ -60,6 +42,11 @@ Store.prototype.calcCookiesSoldPerHour = function() {
     this.totalCookiesSold += hourlySales;
 
     hourlyTotalSales[i] += hourlySales;
+
+    if (i === hoursOfOperation.length - 1)
+    {
+      hourlyTotalSales[i + 1] += this.totalCookiesSold;
+    }
   }
 }
 
