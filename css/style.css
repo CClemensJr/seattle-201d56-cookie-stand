@@ -120,6 +120,7 @@
   }
 
   table tfoot {
+    border-top: .5em solid #262732;
     text-align: center;
   }
 
@@ -129,5 +130,4 @@
 
   table tfoot tr td {
     border-right: .1em solid #994726;
-    border-bottom: .1em solid #ba9648;
   }
