@@ -151,11 +151,13 @@ function renderColumnNames() {
 function renderHourlyTotals() {
   let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
+  let tH = document.createElement("th");
+  let tHContent = document.createTextNode("");
   let tD = document.createElement("td");
   let tDContent = document.createTextNode("");
 
-  tD.appendChild(tDContent);
-  tRow.appendChild(tD);
+  tH.appendChild(tHContent);
+  tRow.appendChild(tH);
 
   for (let i = 0; i < hourlyTotalSales.length; i++) {
     tD = document.createElement("td");
