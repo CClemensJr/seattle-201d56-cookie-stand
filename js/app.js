@@ -158,7 +158,6 @@ function renderColumnNames() {
 
 // THis function renders the last row of the table
 function renderHourlyTotals() {
-  // let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
   let tH = document.createElement("th");
   let tHContent = document.createTextNode("");
