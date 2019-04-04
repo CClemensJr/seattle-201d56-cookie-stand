@@ -158,7 +158,6 @@ function renderColumnNames() {
 
 // THis function renders the last row of the table
 function renderHourlyTotals() {
-  // let tFoot = document.createElement("tfoot");
   let tRow = document.createElement("tr");
   let tH = document.createElement("th");
   let tHContent = document.createTextNode("");
@@ -188,3 +187,22 @@ function initializer() {
 }
 
 initializer();
+
+/*********************
+ * EVENT HANDLING
+ **/
+const formElement = document.getElementById("form");
+
+formElement.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  new Store(event.target.locationName.value, 
+            event.target.minCustomers.value, 
+            event.target.maxCustomers.value, 
+            event.target.avgSale.value);
+
+  tFoot.innerHTML = "";
+
+  renderHourlyTotals();
+});
+
