@@ -82,3 +82,36 @@ body {
 /********************** 
 * Main Content Styling 
 */
+main {
+  position: relative;
+}
+
+main figure:first-of-type {
+  left: 27em;
+  position: absolute;
+  top: 15em;
+}
+
+main figure:nth-of-type(2) {
+  left: 55em;
+  position: absolute;
+  top: 29em;
+}
+
+main figure:nth-of-type(3) {
+  left: 2em;
+  position: absolute;
+  top: 1em;
+}
+
+main figure:nth-of-type(4) {
+  left: 70em;
+  position: absolute;
+  top: 5em;
+}
+
+main figure:last-of-type {
+  left: 10em;
+  position: absolute;
+  top: 35em;
+}
