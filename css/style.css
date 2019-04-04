@@ -85,15 +85,15 @@
     width: 100%;
   }
 
-  main section:first-of-type {
+  /* main section:first-of-type {
     float: left;
-  }
+  } */
 
   table {
     background: #d5d3cd;
     border: 2px solid #252624 ;
-    margin-left: 10%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
   table thead {
@@ -138,13 +138,14 @@
   }
 
 
-  main section:last-of-type {
+  /* main section:last-of-type {
     float: right;
-  }
+  } */
 
   main section:last-of-type form {
     background: yellow;
-    margin-right: 2.5%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
   main section:last-of-type form fieldset legend {
@@ -152,12 +153,13 @@
     text-align: center;
   }
   
-  main section:last-of-type form fieldset label {
+  /* main section:last-of-type form fieldset label {
     display: block;
     text-align: left;
-  }
+  } */
 
   main section:last-of-type form fieldset input {
     display: inline;
-    text-align: right;
+    text-align: left;
+    /* width: 100%; */
   }
