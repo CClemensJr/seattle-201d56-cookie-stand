@@ -84,10 +84,6 @@
     width: 10em;
   } */
 
-  /* Nav Styling */
-  /*
-    Shout out to HTML5 UP | html5up.net | @ajlkn for broadening my navbar horizons
-*/
 
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Mrs+Sheppards|Open+Sans+Condensed:300');
 
@@ -164,7 +160,7 @@
     }
 
 /* Main Content Styling */
-  #home, #overview, #skills, #portfolio, #about, #contact {
+  #home, #about, #merchandise #contact{
       background-color: #191919;
       border-bottom: 1em solid black;
       font-family: 'Open Sans Condensed', sans-serif;
@@ -172,7 +168,7 @@
       width: 100%;
   }
 
-  #overview h1, #skills h1, #portfolio h1, #about h1, #contact h1 {
+  #about h1, #merchandise h1, #contact h1 {
       color: #F9E784; 
       font-family: 'Germania One', cursive;
       font-size: 30px;
@@ -246,39 +242,6 @@
     }
 
 
-    /* Overview Section */
-        #overview article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-        }
-
-
-
-        
-    /* Skills Section */
-        #skills article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-        }
-
-
-    /* Portfolio Section */
-        #portfolio article {
-            background-color: #E58F65;
-            height: 35em;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-        }
-
-
-
     /* About Section */
         #about article {
             background-color: #E58F65;
@@ -287,6 +250,17 @@
             margin-right: 25%;
             width: 50%;
         }
+
+
+    /* Merchandise Section */
+        #merchandise article {
+            background-color: #E58F65;
+            height: 35em;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
 
     /* Contact Section */
         #contact article {
@@ -298,13 +272,13 @@
         }
 
     /* Footer */
-    footer {
-        background: #F1E8B8;
-        height: 3em;
-        line-height: 3em;
-        text-align: center;
-    }
+      footer {
+          background: #F1E8B8;
+          height: 3em;
+          line-height: 3em;
+          text-align: center;
+      }
 
-    footer ul li {
-        display: inline-block;
-    }
+      footer ul li {
+          display: inline-block;
+      }
