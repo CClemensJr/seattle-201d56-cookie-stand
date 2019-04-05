@@ -104,6 +104,10 @@
         z-index: 10000;
     }
 
+    #header figure img {
+      width: 20em;
+    }
+
     #header h1 {
         cursor: default;
         height: 3em;
