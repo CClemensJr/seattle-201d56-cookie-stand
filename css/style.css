@@ -29,6 +29,16 @@
       z-index: 10000;
     }
 
+    /* #header section {
+      margin-left: 20%;
+      margin-right: 20%;
+      width: 80%;
+    } */
+
+    #header figure {
+      margin-left: 10em;
+    }
+
     #header figure img {
       width: 18em;
     }
@@ -36,7 +46,7 @@
     #header h1 {
       cursor: default;
       height: 6em;
-      left: 3em;
+      left: 12em;
       line-height: 6em;
       position: absolute;
       top: 0;
@@ -57,7 +67,7 @@
       height: 6em;
       line-height: 6em;
       position: absolute;
-      right: 3em;
+      right: 10em;
       top: 0;
     }
 
