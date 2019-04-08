@@ -101,7 +101,7 @@
 /********************** 
 * Main Styling 
 */
-  #home, #about, #merchandise, #contact{
+  #home, #about, #merchandise, #contact {
     background-color: #252624;
     border-bottom: 1em solid #994726;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -109,12 +109,16 @@
     width: 100%;
   }
 
+  #about, #merchandise, #contact {
+    padding-top: 6em;
+  }
+
   #about h1, #merchandise h1, #contact h1 {
     color: #F9E784; 
     font-family: 'Germania One', cursive;
     font-size: 30px;
     font-size: 3vw;
-    padding-top: 3em;
+    /* padding-top: 3em; */
     text-align: center;
     text-transform: lowercase;
     width: 100%;
@@ -190,9 +194,6 @@
   /********************** 
   * About Section 
   */
-      #about {
-        padding-top: 6em;
-      }
       #about article {
         background-color: #E58F65;
         height: 42em;
@@ -239,12 +240,56 @@
   */
     #merchandise article {
       background-color: #E58F65;
-      height: 35em;
+      height: 42em;
       margin-left: auto;
       margin-right: auto;
+      padding: 2em;
       width: 75%;
     }
 
+    #merchandise h2 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    #merchandise div:first-of-type {
+      text-align: center;
+      width: 100%;
+    }
+
+    #merchandise div:first-of-type div {
+      display: inline-block;
+      padding: 1em;
+      text-align: center;
+      width: 10em;
+    }
+
+    #merchandise div:first-of-type div img {
+      width: 10em;
+    }
+
+    #merchandise div:last-of-type {
+      padding: 2em;
+      width: 100%;
+    }
+
+    #merchandise div:last-of-type p {
+      text-align: center;
+    }
+
+    #merchandise div:last-of-type figure {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 75%;
+    }
+
+    #merchandise div:last-of-type button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
 
   /********************** 
   * Contact Section 
